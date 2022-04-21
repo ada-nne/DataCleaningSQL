@@ -32,7 +32,7 @@ FROM nashvillehousing
 /*WHERE PropertyAddress IS NULL;*/
 ORDER BY ParcelID;
 
-	/* Some rows have a PropertyAddress that is Null. We're going to use a JOIN to populate the adress based on its ParcelID. */
+	/* Some rows have a PropertyAddress that is Null. I'm going to use a JOIN to populate the adress based on its ParcelID. */
 
 SELECT a.ParcelID, a.propertyAddress, b.ParcelID, b.PropertyAddress, IFNULL(a.PropertyAddress,b.PropertyAddress)
 FROM nashvillehousing a
